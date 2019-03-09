@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 // To type the next 4 lines, start by typing /// and then Tab.
 /// <summary>
 /// Keeps a GameObject on screen.
@@ -15,20 +13,15 @@ public class BoundsCheck : MonoBehaviour
     [Header("Set in Inspector")]
     public float radius = 1f;
 
-
-
     [Header("Set Dynamically")]
     public float camWidth;
     public float camHeight;
-
 
     void Awake()
     {
         camHeight = Camera.main.orthographicSize;                            
         camWidth = camHeight * Camera.main.aspect;                           
     }
-
-
 
     void LateUpdate()
     {                                                     
@@ -58,10 +51,7 @@ public class BoundsCheck : MonoBehaviour
 
     }
 
-
-
     // Draw the bounds in the Scene pane using OnDrawGizmos()
-
     void OnDrawGizmos()
     { 
         if (!Application.isPlaying) return;
